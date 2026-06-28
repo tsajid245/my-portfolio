@@ -76,7 +76,8 @@ const Hero = () => {
       }, isDeleting ? 60 : 100);
     }
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, roleIndex]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [displayText, isDeleting, roleIndex]);
 
   useEffect(() => {
     if (isMobile) return;
